@@ -1,0 +1,34 @@
+{% extends "basic.html" %}
+
+{% block body %}
+<br><br>
+    <div class="container" style=" width: 100%; height: auto; text-align: center; display: flex; position: relative;">
+    		<div style=" border:1px solid black; width: 35%;position:absolute;
+   			top:0;left:0; height: 300px;">
+    			<form action="/student" method="post">
+    				<br>
+				  <label for="rn">roll no:</label>
+				  <input type="text" id="rn" name="rn" required><br><br>
+				  <label for="sem">sem:</label>
+				  <input type=number id="sem" name="sem" required><br><br>
+				  <label for="branch">branch:</label>
+				  <input type="text" id="branch" name="branch" required><br><br>
+				  <input type="submit" name="student" value="student">
+				</form>
+    		</div>
+
+    		<div style=" border:1px solid black; width:40%; position:absolute;
+   			top:0;right:0; height: 300px; width: 35%;">
+    			<form action="/teacher" method="post">
+				  <label for="uname">Username:</label><br>
+				  <input type="text" id="uname" name="uname" required><br>
+				  <label for="pas">Password:</label><br>
+				  <input type="password" id="pas" name="pas" required><br><br>
+				  <input type="submit" name="teacher" value="teacher">
+				</form>
+    		</div>
+    </div>
+  </body>
+</html>
+
+{% endblock %}
